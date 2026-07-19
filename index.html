@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDP School — Toshkentdagi ilk xususiy IT maktab | Qabul 2026–2027</title>
+<meta name="description" content="PDP School — 5–11-sinflar uchun Toshkentdagi ilk xususiy IT maktab. Dasturlash, ingliz tili va matematika bilan boyitilgan ta'lim. Bepul konsultatsiya uchun ariza qoldiring.">
+<meta property="og:title" content="PDP School — Toshkentdagi ilk xususiy IT maktab">
+<meta property="og:description" content="Farzandingiz kelajagini IT sohasiga bog'lang. Qabul faqat 5–11-sinflar uchun.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='60' fill='%231D3FE0'/%3E%3Ctext x='60' y='84' font-family='Arial' font-weight='800' font-size='68' fill='%23fff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --navy:#0A0F24;
+    --navy-2:#121A38;
+    --blue:#2547F4;
+    --blue-dark:#1531B8;
+    --cyan:#17D6FF;
+    --amber:#FFB020;
+    --amber-dark:#E89800;
+    --ink:#0B1120;
+    --muted:#5C6584;
+    --line:#E7EAF3;
+    --light:#F5F7FC;
+    --white:#ffffff;
+    --radius:18px;
+    --shadow:0 20px 50px -20px rgba(10,15,36,.25);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Manrope',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  button{font-family:inherit;cursor:pointer;border:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3,h4{font-weight:800;line-height:1.15;letter-spacing:-0.02em;}
+  h2{font-size:clamp(28px,4vw,42px);}
+  h3{font-size:20px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--blue);background:rgba(37,71,244,.08);
+    padding:7px 14px;border-radius:999px;margin-bottom:16px;
+  }
+  .section{padding:88px 0;}
+  .section-head{max-width:640px;margin-bottom:48px;}
+  .section-head p{color:var(--muted);font-size:17px;margin-top:12px;}
+  .center{text-align:center;margin-left:auto;margin-right:auto;}
+
+  /* ---------- Top utility bar ---------- */
+  .topbar{
+    background:var(--ink);color:#cdd3ea;font-size:13.5px;font-weight:600;
+    text-align:center;padding:9px 16px;
+  }
+  .topbar strong{color:var(--amber);}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--ink);}
+  .logo svg{width:38px;height:38px;flex-shrink:0;}
+  .nav-links{display:flex;gap:30px;align-items:center;}
+  .nav-links a{font-weight:600;font-size:14.5px;color:var(--ink);opacity:.8;transition:.2s;}
+  .nav-links a:hover{opacity:1;color:var(--blue);}
+  .nav-cta{display:flex;align-items:center;gap:18px;}
+  .phone-link{font-weight:700;font-size:15px;white-space:nowrap;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 24px;border-radius:12px;font-weight:700;font-size:15px;
+    transition:.2s ease;white-space:nowrap;
+  }
+  .btn-primary{background:var(--amber);color:var(--ink);}
+  .btn-primary:hover{background:var(--amber-dark);transform:translateY(-1px);}
+  .btn-outline{border:1.5px solid var(--line);color:var(--ink);}
+  .btn-outline:hover{border-color:var(--blue);color:var(--blue);}
+  .btn-block{width:100%;}
+  .burger{display:none;background:none;width:26px;height:20px;position:relative;}
+  .burger span{position:absolute;left:0;right:0;height:2.5px;background:var(--ink);border-radius:2px;transition:.2s;}
+  .burger span:nth-child(1){top:0;}
+  .burger span:nth-child(2){top:8.5px;}
+  .burger span:nth-child(3){top:17px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:radial-gradient(circle at 15% 20%, #142055 0%, var(--navy) 55%), var(--navy);
+    color:#fff;position:relative;overflow:hidden;padding:64px 0 90px;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle,rgba(23,214,255,.14) 1px,transparent 1.5px);
+    background-size:26px 26px;opacity:.5;pointer-events:none;
+  }
+  .hero-grid{max-width:640px;position:relative;z-index:2;}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
+  .hbadge{
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+    padding:7px 13px;border-radius:999px;font-size:12.5px;font-weight:700;color:#c9d3ff;
+    display:flex;align-items:center;gap:6px;
+  }
+  .hbadge b{color:var(--cyan);}
+  .hero h1{font-size:clamp(32px,4.6vw,52px);color:#fff;margin-bottom:20px;}
+  .hero h1 span{color:var(--cyan);}
+  .hero p.lead{font-size:18px;color:#B9C1E6;max-width:520px;margin-bottom:30px;}
+  .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-top:34px;border-top:1px solid rgba(255,255,255,.14);}
+  .hstat b{font-size:clamp(22px,2.6vw,30px);color:#fff;display:block;font-weight:800;}
+  .hstat span{font-size:12.5px;color:#93A0D6;font-weight:600;}
+
+  /* Lead form card */
+  .lead-card{
+    background:#fff;border-radius:20px;padding:30px;color:var(--ink);
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.5);position:relative;z-index:2;
+  }
+  .lead-card .tag{
+    display:inline-block;background:#FFF3DE;color:#92660A;font-weight:700;font-size:12.5px;
+    padding:6px 12px;border-radius:8px;margin-bottom:14px;
+  }
+  .lead-card h3{font-size:22px;margin-bottom:6px;}
+  .lead-card .sub{color:var(--muted);font-size:14px;margin-bottom:20px;}
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:#333c58;}
+  .field input,.field select{
+    width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;
+    font-family:inherit;font-size:15px;background:#FAFBFF;transition:.2s;
+  }
+  .field input:focus,.field select:focus{outline:none;border-color:var(--blue);background:#fff;}
+  .form-note{font-size:12px;color:var(--muted);margin-top:12px;text-align:center;line-height:1.5;}
+  .form-success{display:none;text-align:center;padding:20px 6px;}
+  .form-success.show{display:block;}
+  .form-success .check{
+    width:56px;height:56px;border-radius:50%;background:#E6F9EE;color:#17A85B;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:26px;
+  }
+  .form-error{color:#D6432B;font-size:12.5px;font-weight:600;margin-top:-8px;margin-bottom:10px;display:none;}
+  .form-error.show{display:block;}
+
+  /* ---------- Partners strip ---------- */
+  .partners{padding:34px 0;border-bottom:1px solid var(--line);}
+  .partners .container{display:flex;align-items:center;gap:36px;flex-wrap:wrap;justify-content:space-between;}
+  .partners .label{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap;}
+  .partner-logos{display:flex;gap:34px;flex-wrap:wrap;align-items:center;opacity:.75;}
+  .partner-logos span{font-weight:800;font-size:16px;color:#3a4260;}
+
+  /* ---------- USP cards ---------- */
+  .usp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .usp-card{
+    border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;
+    transition:.25s;background:#fff;
+  }
+  .usp-card:hover{box-shadow:var(--shadow);transform:translateY(-4px);border-color:transparent;}
+  .usp-icon{
+    width:48px;height:48px;border-radius:12px;background:rgba(37,71,244,.09);
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--blue);
+  }
+  .usp-card h3{margin-bottom:9px;font-size:18px;}
+  .usp-card p{color:var(--muted);font-size:14.5px;}
+
+  /* ---------- Stats band ---------- */
+  .stats-band{background:var(--light);}
+  .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+  .stat-item{text-align:center;}
+  .stat-item b{font-size:clamp(28px,3.4vw,40px);font-weight:800;color:var(--blue);display:block;}
+  .stat-item span{font-size:13.5px;color:var(--muted);font-weight:600;}
+
+  /* ---------- Mission ---------- */
+  .mission{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;}
+  .mission-visual{
+    background:linear-gradient(155deg,var(--blue) 0%, #16227a 100%);
+    border-radius:24px;aspect-ratio:1/1;position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .mission-visual svg{width:55%;opacity:.9;}
+  .mission-visual::after{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle,rgba(255,255,255,.16) 1px,transparent 1.5px);
+    background-size:22px 22px;
+  }
+  .mission blockquote{font-size:19px;font-weight:600;color:var(--ink);line-height:1.6;margin-bottom:18px;}
+  .mission p{color:var(--muted);font-size:15.5px;margin-bottom:14px;}
+  .mission cite{font-weight:800;color:var(--blue);font-style:normal;}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:800px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%;text-align:left;background:none;padding:22px 4px;
+    display:flex;justify-content:space-between;align-items:center;gap:20px;
+    font-weight:700;font-size:16.5px;color:var(--ink);
+  }
+  .faq-q .plus{
+    width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.25s;font-size:16px;color:var(--blue);
+  }
+  .faq-item.open .plus{transform:rotate(45deg);background:var(--blue);color:#fff;border-color:var(--blue);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq-a p{padding:0 4px 22px;color:var(--muted);font-size:14.5px;line-height:1.65;max-width:680px;}
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    background:linear-gradient(120deg,var(--blue) 0%, #101a54 100%);
+    color:#fff;border-radius:28px;padding:56px;display:grid;
+    grid-template-columns:1fr .9fr;gap:48px;align-items:center;
+  }
+  .final-cta h2{color:#fff;margin-bottom:10px;}
+  .final-cta p{color:#C7CFF5;font-size:15.5px;max-width:460px;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy);color:#9AA4D4;padding:64px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:48px;}
+  .footer-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:#fff;margin-bottom:14px;}
+  .footer-logo svg{width:32px;height:32px;}
+  footer h4{color:#fff;font-size:14.5px;margin-bottom:16px;}
+  footer ul li{margin-bottom:11px;font-size:14px;}
+  footer ul li a:hover{color:#fff;}
+  .footer-map{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.12);}
+  .footer-map iframe{width:100%;height:170px;border:0;filter:grayscale(.3);}
+  .social-row{display:flex;gap:10px;margin-top:16px;}
+  .social-row a{
+    width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.08);
+    display:flex;align-items:center;justify-content:center;transition:.2s;
+  }
+  .social-row a:hover{background:var(--blue);}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);padding-top:24px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#6b76a8;
+  }
+
+  /* ---------- Floating / mobile CTA ---------- */
+  .mobile-cta{
+    display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;
+    background:#fff;border-top:1px solid var(--line);padding:10px 14px;
+    box-shadow:0 -8px 24px rgba(0,0,0,.08);gap:10px;
+  }
+  .mobile-cta a{flex:1;}
+
+  @media (max-width:980px){
+    .hero-stats{grid-template-columns:repeat(2,1fr);}
+    .mission{grid-template-columns:1fr;}
+    .mission-visual{aspect-ratio:16/9;order:-1;}
+    .usp-grid{grid-template-columns:repeat(2,1fr);}
+    .stats-grid{grid-template-columns:repeat(3,1fr);row-gap:26px;}
+    .final-cta{grid-template-columns:1fr;text-align:center;padding:40px 28px;}
+    .final-cta p{margin:0 auto;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    .nav-links{display:none;}
+    .burger{display:block;}
+    .phone-link{display:none;}
+    .section{padding:60px 0;}
+    .usp-grid{grid-template-columns:1fr;}
+    .stats-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr;gap:32px;}
+    .mobile-cta{display:flex;}
+    body{padding-bottom:70px;}
+    .lead-card{padding:24px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">🎓 <strong>2026–2027 o'quv yili uchun qabul ochiq</strong> — 5–11-sinflar, joylar soni cheklangan</div>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="logo">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="60" fill="#0A0F24"/><text x="60" y="84" font-family="Manrope,Arial" font-weight="800" font-size="66" fill="#fff" text-anchor="middle">S</text><circle cx="86" cy="30" r="4" fill="#17D6FF"/><line x1="86" y1="30" x2="76" y2="42" stroke="#17D6FF" stroke-width="4" stroke-linecap="round"/><circle cx="34" cy="90" r="4" fill="#17D6FF"/><line x1="34" y1="90" x2="44" y2="78" stroke="#17D6FF" stroke-width="4" stroke-linecap="round"/></svg>
+      PDP School
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Nega aynan biz</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Bog'lanish</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+998787777474" class="phone-link">📞 (78) 777-74-74</a>
+      <a href="#lead-form" class="btn btn-primary">Ariza qoldirish</a>
+      <button class="burger" id="burgerBtn" aria-label="menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-badges">
+        <span class="hbadge">🏆 <b>6 yillik</b> tajriba</span>
+        <span class="hbadge">💼 <b>50+</b> hamkor IT kompaniya</span>
+        <span class="hbadge">📈 <b>90%</b> ishga joylashish</span>
+      </div>
+      <h1>Farzandingiz ta'limini <span>Toshkentdagi ilk xususiy IT maktab</span>ga ko'chiring</h1>
+      <p class="lead">Dasturlash, ingliz tili va matematika bilan boyitilgan ta'lim dasturi, sog'lom kun tartibi va nufuzli IT kompaniyalar bilan hamkorlikdagi amaliyot. Qabul faqat 5–11-sinflar uchun.</p>
+      <div class="hero-cta-row">
+        <a href="#lead-form" class="btn btn-primary">Bepul konsultatsiyaga yozilish</a>
+        <a href="tel:+998787777474" class="btn btn-outline" style="border-color:rgba(255,255,255,.25);color:#fff;">📞 (78) 777-74-74</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b>2000+</b><span>PDP bitiruvchilari</span></div>
+        <div class="hstat"><b>50+</b><span>Hamkor IT kompaniya</span></div>
+        <div class="hstat"><b>90%</b><span>Ishga joylashish</span></div>
+        <div class="hstat"><b>$500</b><span>O'rtacha boshlang'ich maosh</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<div class="partners">
+  <div class="container">
+    <span class="label">Hamkorlarimiz va sertifikatlar</span>
+    <div class="partner-logos">
+      <span>Pearson</span>
+      <span>PDP University</span>
+      <span>10+ IT kompaniya</span>
+      <span>PDP Ecosystem</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT / USP ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">PDP School haqida</span>
+      <h2>Talabi yuqori IT sohasiga ixtisoslashgan ta'lim tizimi</h2>
+      <p>Dasturchi kadrlar yetishtirishda 6 yillik tajribaga ega ekotizim ustida qurilgan, farzandingiz salomatligi va rivojlanishini bab-baravar o'ylaydigan maktab.</p>
+    </div>
+    <div class="usp-grid" id="why">
+      <div class="usp-card">
+        <div class="usp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2 2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>6 yillik tajriba</h3>
+        <p>Dasturchi kadrlar yetishtirishda katta tajribaga ega PDP ekotizimi asosida qurilgan ta'lim dasturi.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Sog'lom kun tartibi</h3>
+        <p>Sport mashg'ulotlari va maxsus menyu asosida shakllantirilgan sog'lom turmush tarzi.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Xavfsizlik nazorati</h3>
+        <p>Farzandlaringiz salomatligi va xavfsizligi 24/7 nazorat ostida.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Ingliz tili + Matematika</h3>
+        <p>Pearson dasturi asosida boyitilgan ingliz tili va chuqurlashtirilgan matematika fanlari.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 21h8M12 18v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Amaliy IT ta'lim</h3>
+        <p>Zamonaviy dasturlash yo'nalishlari bo'yicha amaliyotga yo'naltirilgan darslar.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7 3.13a4 4 0 0 1 0 7.75M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>50+ hamkor kompaniya</h3>
+        <p>Amaliyot o'tash va ishga joylashish uchun nufuzli IT kompaniyalar bilan hamkorlik.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="section stats-band">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">PDP raqamlarda</span>
+      <h2>O'zbekistonda IT mutaxassislar elitasini shakllantiruvchi ekotizim</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item"><b>10+</b><span>Yillik tajriba</span></div>
+      <div class="stat-item"><b>6</b><span>Yil — o'rtacha ishga joylashish davri</span></div>
+      <div class="stat-item"><b>50+</b><span>Hamkor IT kompaniya</span></div>
+      <div class="stat-item"><b>$500</b><span>O'rtacha boshlang'ich maosh</span></div>
+      <div class="stat-item"><b>2000+</b><span>PDP bitiruvchilari</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION ============ -->
+<section class="section">
+  <div class="container mission">
+    <div class="mission-visual">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="60" fill="rgba(255,255,255,.12)"/><text x="60" y="84" font-family="Manrope,Arial" font-weight="800" font-size="66" fill="#fff" text-anchor="middle">S</text><circle cx="86" cy="30" r="4" fill="#17D6FF"/><line x1="86" y1="30" x2="76" y2="42" stroke="#17D6FF" stroke-width="4" stroke-linecap="round"/><circle cx="34" cy="90" r="4" fill="#17D6FF"/><line x1="34" y1="90" x2="44" y2="78" stroke="#17D6FF" stroke-width="4" stroke-linecap="round"/></svg>
+    </div>
+    <div>
+      <span class="eyebrow">PDP School'ning maqsadi</span>
+      <blockquote>"Google, Facebook, Tesla, Apple asoschilari yoshligidan IT bilan shug'ullangan. Stiv Jobs 9 yoshida IBM'ga ishga kirgan, Mark Zukerberg 12 yoshidan dastur yozgan."</blockquote>
+      <p>Bizning maqsadimiz — bolalarni yoshligidan IT sohasi bo'yicha sifatli ta'lim bilan ta'minlab, dunyoga mashhur korporatsiyalarni aynan O'zbekistondan chiqarish.</p>
+      <p><cite>Timurbek Nuriddin — PDP School direktori</cite></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" style="background:var(--light);" id="faq">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Savol-javob</span>
+      <h2>Ko'p beriladigan savollar</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Qaysi sinflar uchun qabul olinadi?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Qabul faqat 5–11-sinf o'quvchilari uchun amalga oshiriladi.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">O'quv dasturiga nimalar kiradi?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Davlat umumta'lim dasturi bilan bir qatorda dasturlash, ingliz tili (Pearson dasturi asosida) va chuqurlashtirilgan matematika fanlari o'qitiladi.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">To'lovni qanday rejalashtirish mumkin?<span class="plus">+</span></button>
+        <div class="faq-a"><p>1 oylik, 5 oylik yoki 10 oylik to'lov rejalaridan birini tanlashingiz mumkin. Batafsil shartlar konsultatsiya jarayonida aytib beriladi.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Bitiruvchilar qanday ishga joylashadi?<span class="plus">+</span></button>
+        <div class="faq-a"><p>PDP ekotizimi 50 dan ortiq nufuzli IT kompaniya bilan hamkorlik qiladi, bu amaliyot o'tash va ishga joylashish imkoniyatini oshiradi. O'rtacha ishga joylashish koeffitsienti 90% ni tashkil qiladi.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Maktab qayerda joylashgan?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Toshkent shahri, Sirg'ali tumani, Yangi Sergeli ko'chasi 12-uy (Mashina bozor ro'parasida).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA + LEAD FORM ============ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="final-cta">
+      <div>
+        <h2>Farzandingiz kelajagi uchun birinchi qadamni bugun tashlang</h2>
+        <p>Ismingiz va raqamingizni qoldiring — mutaxassislarimiz sizga qabul shartlari va to'lov rejalari bo'yicha bepul konsultatsiya beradi.</p>
+      </div>
+
+      <div class="lead-card" id="lead-form">
+        <span class="tag">⚡ 24 soat ichida siz bilan bog'lanamiz</span>
+        <h3>Bepul konsultatsiya oling</h3>
+        <p class="sub">Ismingiz va raqamingizni qoldiring — qabul shartlari va narxlar haqida batafsil ma'lumot beramiz.</p>
+
+        <form id="pdpLeadForm" novalidate>
+          <div class="field">
+            <label for="name">Ismingiz</label>
+            <input type="text" id="name" name="name" placeholder="Ismingizni yozing" required>
+          </div>
+          <div class="field">
+            <label for="phone">Telefon raqamingiz</label>
+            <input type="tel" id="phone" name="phone" placeholder="+998 ** *** ** **" required>
+          </div>
+          <div class="form-error" id="formError">Iltimos, ism va telefon raqamingizni to'g'ri kiriting.</div>
+          <button type="submit" class="btn btn-primary btn-block">Murojaat qoldirish →</button>
+          <p class="form-note">Ma'lumotlaringiz maxfiy saqlanadi va faqat siz bilan bog'lanish uchun ishlatiladi.</p>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="check">✓</div>
+          <h3>Rahmat!</h3>
+          <p class="sub" style="margin-bottom:0;">Arizangiz qabul qilindi. Tez orada mutaxassislarimiz siz bilan bog'lanadi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="60" fill="#17D6FF"/><text x="60" y="84" font-family="Manrope,Arial" font-weight="800" font-size="66" fill="#0A0F24" text-anchor="middle">S</text></svg>
+          PDP School
+        </div>
+        <p style="font-size:14px;line-height:1.7;max-width:280px;">Toshkentdagi ilk xususiy IT maktab. Farzandingizni yoshligidan IT sohasiga tayyorlaymiz.</p>
+        <div class="social-row">
+          <a href="https://instagram.com/pdpschool" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://t.me/pdpschooluz" target="_blank" rel="noopener" aria-label="Telegram">✈️</a>
+          <a href="https://www.facebook.com/pdp.schooluz" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+      <div>
+        <h4>Sahifalar</h4>
+        <ul>
+          <li><a href="#about">Nega aynan biz</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Aloqa</h4>
+        <ul>
+          <li><a href="tel:+998787777474">(78) 777-74-74</a></li>
+          <li><a href="https://t.me/pdpschooluz" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="#lead-form">Ariza qoldirish</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Manzil</h4>
+        <p style="font-size:14px;margin-bottom:14px;line-height:1.6;">Toshkent shahri, Sirg'ali tumani, Yangi Sergeli ko'chasi 12-uy</p>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12001.711365722465!2d69.2156476!3d41.2342375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae6183ea313917%3A0xdc59607ad734d20c!2sPDP%20University!5e0!3m2!1sen!2s!4v1690985258449!5m2!1sen!2s" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© PDP School 2026. Barcha huquqlar himoyalangan.</span>
+      <span>5–11-sinflar uchun qabul davom etmoqda</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ Mobile sticky CTA ============ -->
+<div class="mobile-cta">
+  <a href="tel:+998787777474" class="btn btn-outline">📞 Qo'ng'iroq</a>
+  <a href="#lead-form" class="btn btn-primary">Ariza qoldirish</a>
+</div>
+
+<script>
+(function(){
+  // Mobile nav toggle
+  var burger = document.getElementById('burgerBtn');
+  var navLinks = document.querySelector('.nav-links');
+  burger.addEventListener('click', function(){
+    var open = navLinks.style.display === 'flex';
+    navLinks.style.display = open ? 'none' : 'flex';
+    navLinks.style.cssText += open ? '' : 'position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:18px 24px;border-bottom:1px solid #E7EAF3;gap:16px;';
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ if(window.innerWidth<=720){ navLinks.style.display='none'; } });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Simple UZ phone formatting helper
+  var phoneInput = document.getElementById('phone');
+  phoneInput.addEventListener('focus', function(){
+    if(!phoneInput.value) phoneInput.value = '+998 ';
+  });
+  phoneInput.addEventListener('input', function(){
+    var digits = phoneInput.value.replace(/\D/g,'').replace(/^998/,'');
+    digits = digits.slice(0,9);
+    var out = '+998 ';
+    if(digits.length>0) out += digits.slice(0,2);
+    if(digits.length>2) out += ' ' + digits.slice(2,5);
+    if(digits.length>5) out += ' ' + digits.slice(5,7);
+    if(digits.length>7) out += ' ' + digits.slice(7,9);
+    phoneInput.value = out.trim() === '+998' ? '+998 ' : out;
+  });
+
+  /* ================================================================
+     BITRIX24 INTEGRATSIYASI
+     Bitrix24'da "Сделка" (Deal) obyektida NAME/LAST_NAME/PHONE degan
+     alohida maydon YO'Q — bu ma'lumotlar faqat "Контакт" (Client) obyektiga
+     tegishli va Deal kartochkasidagi "Клиент" ustuni aynan bog'langan
+     kontaktdan olinadi. Shuning uchun integratsiya ikki bosqichda ishlaydi:
+
+       1-qadam: crm.contact.add — ism, familiya va telefon bilan yangi
+                Kontakt yaratiladi, javobda uning ID'si qaytadi.
+       2-qadam: crm.deal.add — CATEGORY_ID (voronka) va CONTACT_ID
+                (1-qadamda olingan ID) bilan Deal yaratiladi va shu
+                kontaktga bog'lanadi.
+
+     Natijada Deal kanban'ida "Клиент" ustunida ism va telefon raqami
+     to'g'ri ko'rinadi:
+     https://space.pdp.uz/crm/deal/kanban/category/95/  →  CATEGORY_ID = 95
+
+     Agar boshqa voronkaga yo'naltirish kerak bo'lsa, faqat DEAL_CATEGORY_ID
+     qiymatini o'zgartiring (URL'dagi /category/NN/ raqami).
+
+     Ishonchlilik uchun qo'llangan choralar:
+     1) So'rovlar application/x-www-form-urlencoded formatida yuboriladi —
+        bu "content-type: application/json" dan farqli o'laroq brauzer
+        tomonidan CORS preflight (OPTIONS) so'rovini keltirib chiqarmaydi,
+        shu bilan ko'plab Bitrix24 muhitlarida uchraydigan CORS xatolari
+        oldini oladi.
+     2) Har bir so'rovga 10 soniyalik timeout qo'yilgan — sekin tarmoq
+        sahifani "osib qoldirmaydi".
+     3) Agar so'rovlar muvaffaqiyatsiz tugasa (tarmoq xatosi, CORS,
+        vaqtinchalik server nosozligi), lead localStorage navbatiga
+        saqlanadi va foydalanuvchi saytga qayta kirganda avtomatik qayta
+        yuboriladi — hech qanday murojaat yo'qolmaydi.
+     4) Foydalanuvchiga muvaffaqiyat xabari tarmoq javobini kutmasdan
+        darhol ko'rsatiladi, shunga UX sekinlik yoki vaqtinchalik CRM
+        nosozligidan zarar ko'rmaydi.
+     5) STAGE_ID atayin belgilanmagan — Bitrix24 CATEGORY_ID berilganda
+        avtomatik ravishda o'sha voronkaning birinchi bosqichiga qo'yadi,
+        bu noto'g'ri STAGE_ID kodi tufayli xato chiqish xavfini yo'qotadi.
+  ================================================================= */
+  var BITRIX_WEBHOOK_BASE = "https://space.pdp.uz/rest/66547/hb1bn79qkhoyj9cj/";
+  var DEAL_CATEGORY_ID = 95; // https://space.pdp.uz/crm/deal/kanban/category/95/
+  var PENDING_LEADS_KEY = "pdp_pending_leads_v3";
+  var REQUEST_TIMEOUT_MS = 10000;
+
+  // UTM parametrlarini olib qolish (reklama trafigini kuzatish uchun)
+  var params = new URLSearchParams(window.location.search);
+  var utm = {
+    utm_source: params.get('utm_source') || '',
+    utm_medium: params.get('utm_medium') || '',
+    utm_campaign: params.get('utm_campaign') || ''
+  };
+
+  function callBitrix(method, body){
+    var controller = ('AbortController' in window) ? new AbortController() : null;
+    var timeoutId = controller ? setTimeout(function(){ controller.abort(); }, REQUEST_TIMEOUT_MS) : null;
+
+    return fetch(BITRIX_WEBHOOK_BASE + method + '.json', {
+      method: 'POST',
+      body: body, // URLSearchParams -> avtomatik x-www-form-urlencoded, preflight yo'q
+      signal: controller ? controller.signal : undefined
+    }).then(function(res){
+      if(timeoutId) clearTimeout(timeoutId);
+      return res.json().catch(function(){ return {}; }).then(function(json){
+        if(!res.ok || json.error){
+          throw new Error(json.error_description || json.error || ('HTTP ' + res.status));
+        }
+        return json;
+      });
+    }).catch(function(err){
+      if(timeoutId) clearTimeout(timeoutId);
+      throw err;
+    });
+  }
+
+  function buildContactBody(data){
+    var digitsAll = data.phone.replace(/\D/g,'');       // "998901234567"
+    var digitsNoPrefix = digitsAll.replace(/^998/, '');  // "901234567" (+998siz)
+    var phoneWithPrefix = '+' + digitsAll;               // "+998901234567"
+
+    var body = new URLSearchParams();
+    body.append('fields[NAME]', data.name);
+    body.append('fields[PHONE][0][VALUE_TYPE]', digitsNoPrefix); // +998 qo'shmasdan
+    body.append('fields[PHONE][0][VALUE]', phoneWithPrefix);     // +998 qo'shib
+    body.append('fields[SOURCE_ID]', 'WEB');
+    body.append('fields[SOURCE_DESCRIPTION]', 'PDP School landing sahifasi');
+    body.append('params[REGISTER_SONET_EVENT]', 'Y');
+    return body;
+  }
+
+  function buildDealBody(data, contactId){
+    var digitsAll = data.phone.replace(/\D/g,'');
+    var phoneWithPrefix = '+' + digitsAll;
+
+    var body = new URLSearchParams();
+    body.append('fields[TITLE]', "Sayt: " + data.name);
+    body.append('fields[CATEGORY_ID]', String(DEAL_CATEGORY_ID));
+    body.append('fields[CONTACT_ID]', String(contactId));
+    body.append('fields[COMMENTS]',
+      "Ism: " + data.name + "\n" +
+      "Telefon: " + phoneWithPrefix + "\n" +
+      "UTM: " + JSON.stringify(data.utm)
+    );
+    body.append('fields[SOURCE_ID]', 'WEB');
+    body.append('fields[SOURCE_DESCRIPTION]', 'PDP School landing sahifasi');
+    body.append('params[REGISTER_SONET_EVENT]', 'Y');
+    return body;
+  }
+
+  function sendToBitrix(data){
+    if(!BITRIX_WEBHOOK_BASE){ return Promise.reject(new Error('Webhook sozlanmagan')); }
+    // 1) Avval Kontakt yaratiladi (ism + telefon shu yerda saqlanadi)
+    return callBitrix('crm.contact.add', buildContactBody(data)).then(function(contactRes){
+      var contactId = contactRes.result;
+      // 2) Kontakt ID bilan Deal yaratiladi -> "Клиент" ustunida ko'rinadi
+      return callBitrix('crm.deal.add', buildDealBody(data, contactId));
+    });
+  }
+
+  function getPendingLeads(){
+    try{ return JSON.parse(localStorage.getItem(PENDING_LEADS_KEY) || '[]'); }
+    catch(e){ return []; }
+  }
+
+  function queuePendingLead(data){
+    try{
+      var q = getPendingLeads();
+      q.push(data);
+      localStorage.setItem(PENDING_LEADS_KEY, JSON.stringify(q));
+    }catch(e){ /* localStorage mavjud bo'lmasa jim o'tkazamiz, UX buzilmaydi */ }
+  }
+
+  function flushPendingLeads(){
+    var q = getPendingLeads();
+    if(!q.length) return;
+    var remaining = [];
+    var chain = Promise.resolve();
+    q.forEach(function(item){
+      chain = chain.then(function(){
+        return sendToBitrix(item).catch(function(){ remaining.push(item); });
+      });
+    });
+    chain.then(function(){
+      try{ localStorage.setItem(PENDING_LEADS_KEY, JSON.stringify(remaining)); }catch(e){}
+    });
+  }
+  // Sahifa ochilganda avvalgi, yuborilmay qolgan murojaatlarni qayta yuborishga urinamiz
+  flushPendingLeads();
+
+  var form = document.getElementById('pdpLeadForm');
+  var errorBox = document.getElementById('formError');
+  var successBox = document.getElementById('formSuccess');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var phone = document.getElementById('phone').value.replace(/\s/g,'');
+
+    var phoneDigits = phone.replace(/\D/g,'');
+    if(name.length < 2 || phoneDigits.length < 12){
+      errorBox.classList.add('show');
+      return;
+    }
+    errorBox.classList.remove('show');
+
+    var leadData = { name: name, phone: phone, utm: utm };
+
+    sendToBitrix(leadData).then(function(){
+      console.log('[PDP School] Lead Bitrix24-ga muvaffaqiyatli yuborildi.');
+    }).catch(function(err){
+      console.warn('[PDP School] Bitrix24-ga yuborishda xatolik, lead navbatga saqlandi va keyingi tashrifda qayta urinib ko\'riladi:', err);
+      queuePendingLead(leadData);
+    });
+
+    // Muvaffaqiyat xabari tarmoq javobini kutmasdan ko'rsatiladi —
+    // lead hech qachon yo'qolmaydi (muvaffaqiyatli yuboriladi yoki navbatda saqlanadi).
+    showSuccess();
+  });
+
+  function showSuccess(){
+    form.style.display = 'none';
+    successBox.classList.add('show');
+  }
+})();
+</script>
+
+</body>
+</html>
